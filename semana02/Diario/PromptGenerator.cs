@@ -1,1 +1,22 @@
+using System;
+using System.Collections.Generic;
 
+public class PromptGenerator
+{
+    private List<string> _prompts = new List<string>()
+    {
+        "Qual foi a melhor parte do meu dia?",
+        "Quem foi a pessoa mais interessante com quem interagi hoje?",
+        "Qual foi a emoção mais forte que senti hoje?",
+        "Como vi a mão do Senhor em minha vida hoje?",
+        "Se eu pudesse fazer uma coisa hoje, o que seria?"
+    };
+
+    public string GetRandomPrompt()
+    {
+        Random random = new Random();
+        int index = random.Next(_prompts.Count);
+
+        return _prompts[index];
+    }
+}
