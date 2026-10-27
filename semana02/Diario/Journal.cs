@@ -33,7 +33,7 @@ public class Journal
 
         foreach (string line in lines)
         {
-            string[] parts = line.Split("|");
+            string[] parts = line.Split('|');
 
             Entry entry = new Entry();
 
