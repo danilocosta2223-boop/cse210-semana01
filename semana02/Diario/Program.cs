@@ -37,6 +37,28 @@ class Program
 
                 journal._entries.Add(entry);
             }
+            else if (choice == 2)
+            {
+                journal.DisplayAll();
+            }
+            else if (choice == 3)
+            {
+                Console.Write("Nome do arquivo: ");
+                string fileName = Console.ReadLine();
+
+                journal.SaveToFile(fileName);
+
+                Console.WriteLine("Diário salvo.");
+            }
+            else if (choice == 4)
+            {
+                Console.Write("Nome do arquivo: ");
+                string fileName = Console.ReadLine();
+
+                journal.LoadFromFile(fileName);
+
+                Console.WriteLine("Diário carregado.");
+            }
         }
     }
 }
