@@ -11,6 +11,7 @@ class Program
 
         while (choice != 5)
         {
+            Console.WriteLine();
             Console.WriteLine("1. Escrever");
             Console.WriteLine("2. Exibir");
             Console.WriteLine("3. Salvar");
@@ -44,20 +45,22 @@ class Program
             else if (choice == 3)
             {
                 Console.Write("Nome do arquivo: ");
+
                 string fileName = Console.ReadLine();
 
                 journal.SaveToFile(fileName);
 
-                Console.WriteLine("Diário salvo.");
+                Console.WriteLine("Diário salvo com sucesso.");
             }
             else if (choice == 4)
             {
                 Console.Write("Nome do arquivo: ");
+
                 string fileName = Console.ReadLine();
 
                 journal.LoadFromFile(fileName);
 
-                Console.WriteLine("Diário carregado.");
+                Console.WriteLine("Diário carregado com sucesso.");
             }
         }
     }
